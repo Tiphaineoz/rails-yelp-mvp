@@ -1,0 +1,14 @@
+<div class="container col-6">
+<h1>Restaurants</h1>
+
+<ul> 
+  <% @restaurants.each do |r| %>
+    <li> 
+      <%= link_to r.name, show_path(r) %> -
+      <%= r.category %>      
+    </li>
+  <% end %>
+</ul>
+
+<button class="btn-yellow"><%= link_to "Add a new Restaurant", restaurants_new_path %></button>
+</div>
